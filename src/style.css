@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #de6161;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2657eb, #de6161);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2657eb, #de6161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+}
+.block-effect {
+  padding-top: 260px;
+  font-size: 100px;
+}
+.block-reveal {
+  --t: calc(var(--td) + var(--d));
+  color: transparent;
+  padding: 0px;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  animation: revealBlock 0s var(--t) forwards;
+}
+.block-reveal::after {
+  content: '';
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bc);
+  animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+}
+.title, .desc {
+  padding-left: 80px;
+}
+.desc {
+  font-size: 26px;
+  top: -24px;
+}
+@keyframes revealBlock {
+  100% {
+    color: #333;
+  }
+}
+@keyframes revealingIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes revealingOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.startup_image {
+  position: absolute;
+  top: 130px;
+  width: 35%;
+  right: 90px;
+}
+.reg {
+  position: absolute;
+  margin-top: 10px;
+  left: 80px;
+}
+.reg button {
+  float: left;
+  display: inline-block;
+  width: 190px;
+  font-size: 20px;
+  color: #333;
+  background-color: transparent;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 5px 0;
+  text-decoration: none;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.reg button:first-child {
+  margin-right: 30px;
+}
+.reg button:hover {
+  background-color: #333;
+  color: #D9D9D9;
+}
+.goals {
+  text-align: center;
+  margin-top: 380px;
+  width: 90%;
+  margin-left: 5%;
+}
+.goals p {
+  font-size: 18px;
+  color: #333;
+}
+.goals h1 {
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+}
+.timeline {
+  position: relative;
+  margin: 45px 0;
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #333;
+  border-radius: 8px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+.goal-left,
+.goal-right {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+}
+.goal-left::after,
+.goal-right::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.goal-left {
+  left: 0;
+}
+.goal-right {
+  left: 50%;
+  bottom: 110px;
+}
+.goal-left:nth-child(3) {
+  bottom: 100px;
+}
+.goal-right:nth-child(3) {
+  margin-top: -120px;
+}
+.goal-left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #ffffff;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #ffffff;
+}
+.goal-right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #ffffff;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #ffffff transparent transparent;
+}
+.goal-right::after {
+  left: -12px;
+}
+.goal-left::after {
+  right: -12px;
+}
+.content {
+  padding: 20px 30px;
+  background-color: #FFF;
+  border-radius: 8px;
+}
+.content h2 {
+  color: #333 !important;
+  margin-bottom: 12px;
+}
