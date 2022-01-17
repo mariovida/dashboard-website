@@ -1,0 +1,156 @@
+<template>
+  <div class="contact">
+    <h1>You have questions for us?</h1>
+    <h2>Get in touch with us!</h2>
+    <form @submit.prevent="sendEmail">
+      <!--<label>Name</label>-->
+      <input
+        type="text"
+        v-model="name"
+        name="name"
+        placeholder="Your Name"
+      >
+      <!--<label>Email</label>-->
+      <input
+        type="email"
+        v-model="email"
+        name="email"
+        placeholder="Your Email"
+      >
+      <!--<label>Message</label>-->
+      <textarea
+        name="message"
+        v-model="message"
+        rows="8"
+        placeholder="Message">
+      </textarea>
+
+      <input type="submit" value="Send">
+    </form>
+    <div class="info">
+      <i class="far fa-map"><p>Radnička cesta 47, Zagreb, Hrvatska</p></i>
+      <i class="fas fa-phone-alt"><p>+385 91 732 4270</p></i>
+      <i class="fas fa-clock"><p><b>Mon-Fri</b> : 09:00-17:00</p></i>
+    </div>
+  </div>
+</template>
+
+<script>
+import emailjs from 'emailjs-com';
+
+export default {
+  name: 'ContactForm',
+  data() {
+    return {
+      name: '',
+      email: '',
+      message: ''
+    }
+  },
+  methods: {
+    sendEmail(e) {
+      try {
+        emailjs.sendForm('service_021yx7l', 'template_28jr628', e.target,
+        'user_Z8v3GL7mhuHQbwmfi4RhV', {
+          name: this.name,
+          email: this.email,
+          message: this.message
+        })
+
+      } catch(error) {
+          console.log({error})
+      }
+      // Reset form field
+      this.name = ''
+      this.email = ''
+      this.message = ''
+    },
+  }
+}
+</script>
+
+<style scoped>
+.contact {
+  width: 100%;
+  position: absolute;
+  top: 44%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+h1 {
+  text-align: left;
+  margin-left: 8%;
+  font-size: 48px;
+  color: #333;
+  padding-top: 80px;
+}
+h2 {
+  text-align: left;
+  margin-left: 8%;
+  font-size: 28px;
+  color: #333;
+}
+form {
+  width: 30%;
+  margin-left: 8%;
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+label {
+  float: left;
+}
+input[type=text], [type=email], textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 0 12px 16px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  width: 100%;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 0px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45A049;
+}
+input:focus, textarea:focus {
+  outline: 0;
+}
+.info {
+  position: absolute;
+  top: 270px;
+  left: 45%;
+  width: 600px;
+  height: 432px;
+  float: right;
+  margin-right: 8%;
+  padding: 110px 0;
+  border-left: 4px solid #333;
+}
+.info i {
+  float: left;
+  font-size: 26px;
+  font-weight: bold;
+  padding-left: 120px;
+  margin-bottom: 50px;
+}
+.info p {
+  float: right;
+  font-size: 22px;
+  font-weight: 400;
+  padding-left: 24px;
+  margin-top: 2px;
+}
+</style>
