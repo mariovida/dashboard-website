@@ -177,11 +177,16 @@ input:focus, textarea:focus {
   }
 }
 @media screen and (max-width: 1080px) {
+  .contact {
+    top: 0;
+    right: 0;
+    transform: translate(0%, 0%);
+  }
   h1 {
     text-align: center;
     margin-left: 0;
     font-size: 48px;
-    margin-top: 380px;
+    margin-top: 30px;
   }
   h2 {
     text-align: center;
@@ -193,8 +198,11 @@ input:focus, textarea:focus {
     margin-top: 380px;
     padding: 0;
   }
+  input[type=submit] {
+    margin-bottom: 40px;
+  }
   .info {
-    top: 570px;
+    top: 240px;
     left: 22%;
     width: 56%;
     height: 350px;
@@ -219,11 +227,6 @@ input:focus, textarea:focus {
   }
 }
 @media screen and (max-width: 768px) {
-  .contact {
-    top: 0;
-    right: 0;
-    transform: translate(0%, 0%);
-  }
   h1 {
     font-size: 48px;
     margin-top: 100px;
@@ -235,15 +238,15 @@ input:focus, textarea:focus {
     font-weight: 400;
   }
   .info {
-    top: 150px;
-    left: 11%;
-    width: 78%;
+    top: 220px;
+    left: 6%;
+    width: 94%;
     height: 350px;
   }
   .info i {
     display: block;
     font-size: 32px;
-    padding: 0 35px 0 0;
+    padding: 0 70px 0 0;
     margin-bottom: 50px;
   }
 }
@@ -259,7 +262,7 @@ input:focus, textarea:focus {
   form {
     width: 86%;
     margin-left: 7%;
-    margin-top: 460px;
+    margin-top: 500px;
   }
   input[type=text], [type=email], textarea {
     font-size: 15px;
@@ -267,11 +270,8 @@ input:focus, textarea:focus {
     margin-top: 12px;
     margin-bottom: 20px;
   }
-  input[type=submit] {
-    margin-bottom: 40px;
-  }
   .info {
-    top: 250px;
+    top: 260px;
     left: 0;
     width: 100%;
     text-align: center;
