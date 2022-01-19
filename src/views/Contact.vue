@@ -249,17 +249,17 @@ input:focus, textarea:focus {
 }
 @media screen and (max-width: 600px) {
   h1 {
-    font-size: 32px;
+    font-size: 40px;
   }
   h2 {
     text-align: center;
-    font-size: 21px;
-    padding-top: 10px;
+    font-size: 24px;
+    padding-top: 5px;
   }
   form {
     width: 86%;
     margin-left: 7%;
-    margin-top: 400px;
+    margin-top: 420px;
   }
   input[type=text], [type=email], textarea {
     font-size: 15px;
@@ -271,7 +271,7 @@ input:focus, textarea:focus {
     margin-bottom: 40px;
   }
   .info {
-    top: 210px;
+    top: 300px;
     left: 0;
     width: 100%;
     text-align: center;
