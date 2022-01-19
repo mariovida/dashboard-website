@@ -1,5 +1,21 @@
 <template>
-  <div class="main">
+  <div class="dashboard">
+    <div
+      class="hamburger"
+      @click="hamburgerOpen = !hamburgerOpen"
+      :class="hamburgerOpen ? 'hamburger--is-open' : ''"
+    >
+      <div class="hamburger__item hamburger__item--first"></div>
+      <div class="hamburger__item hamburger__item--middle"></div>
+      <div class="hamburger__item hamburger__item--last"></div>
+    </div>
+    <div class="droper-content" :class="hamburgerOpen ? 'dropic' : ''">
+      <router-link to="/">HOME</router-link>
+      <router-link to="/dashboard">DASHBOARD</router-link>
+      <router-link to="/about">ABOUT</router-link>
+      <router-link to="/contact">CONTACT</router-link>
+    </div>
+
     <div class="nav-background"></div>
     <div v-if="user" class="left-nav">
       <div><img src="../assets/man.png" /></div><h1>{{ user.data.displayName }}</h1>
@@ -10,6 +26,8 @@
       </div>
     </div>
 
+    <ChartPie class="chart-pie "/>
+    <ChartArea class="chart-area" />
   </div>
 </template>
 
@@ -17,9 +35,20 @@
 import { mapGetters } from "vuex";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
+import ChartPie from '../components/ChartPie.vue'
+import ChartArea from '../components/ChartLine.vue'
 
 export default {
   name: 'main',
+  components: {
+    ChartPie,
+    ChartArea
+  },
+  data() {
+    return {
+      hamburgerOpen: false,
+    }
+  },
   computed: {
     ...mapGetters({
       user: "user"
@@ -48,7 +77,12 @@ export default {
   font-family: "Poppins";
   padding: 0;
   margin: 0;
+}
+.dashboard {
   background-color: #F2F2F2;
+}
+.hamburger__item {
+  background: #F2F2F2;
 }
 .nav-background {
   position: absolute;
@@ -109,5 +143,42 @@ h1 {
 }
 .left-nav-buttons a.router-link-exact-active:hover {
   background-color: #404040;
+}
+.chart-pie, .chart-area {
+  width: 450px;
+  position: absolute;
+  top: 110px;
+  left: 310px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+}
+.chart-area {
+  width: 450px;
+  left: 790px;
+  padding: 30px 20px;
+}
+@media screen and (max-width: 768px) {
+  .dropic.droper-content {
+    top: 100px;
+  }
+  .left-nav {
+    width: 0;
+  }
+  .left-nav-buttons a {
+    display: none;
+  }
+  .chart-pie, .chart-area {
+    width: 90%;
+    top: 120px;
+    left: 5%;
+    border: 0;
+    border-bottom: 2px solid #333;
+    border-radius: 0;
+    padding: 0 0 20px 0;
+  }
+  .chart-area {
+    top: 335px;
+  }
 }
 </style>

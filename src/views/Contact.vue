@@ -51,9 +51,6 @@
   </div>
 </template>
 
-<style scoped>
-</style>
-
 <script>
 import emailjs from 'emailjs-com';
 
