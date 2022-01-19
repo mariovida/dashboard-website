@@ -5,6 +5,10 @@ import store from './store.js'
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
 import 'firebase/compat/firestore'
+import VueApexCharts from 'vue-apexcharts'
+Vue.use(VueApexCharts)
+
+Vue.component('apexchart', VueApexCharts)
 
 const firebaseConfig = {
   apiKey: "AIzaSyCcXKbW-e-z-HV2AD76X1OFw7FcDRhjuIk",
