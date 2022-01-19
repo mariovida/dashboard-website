@@ -1,7 +1,8 @@
 <h1 align="center">Welcome to Dashboard Website 👋</h1>
-<h3 align="center">⚠️ In development</h3>
 
 ![image](/src/assets/screen_home.png)
+
+<h3 align="center">⚠️ In development</h3>
 
 
 ## Tech and tools used
