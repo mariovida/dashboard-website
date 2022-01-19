@@ -2,6 +2,8 @@
 
 ![image](/src/assets/screen_home.png)
 
+<p align="left">❌ In development</p>
+
 
 ## Tech and tools used
 <p align="left">
