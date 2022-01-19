@@ -83,4 +83,8 @@ export default {
 .change_color #nav a:hover {
   background-color: #404040;
 }
+@media screen and (max-width: 768px) {
+  #nav {display: none;}
+  .change_color { display: none;}
+}
 </style>

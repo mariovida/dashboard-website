@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Register from '../views/Register.vue'
 import Login from '../views/Login.vue'
-import UserInfo from '../views/AddData.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
 import Todo from '../views/ToDo.vue'
@@ -28,11 +27,6 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login
-  },
-  {
-    path: '/userinfo',
-    name: 'UserInfo',
-    component: UserInfo
   },
   {
     path: '/dashboard',

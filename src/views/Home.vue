@@ -1,5 +1,20 @@
 <template>
   <div class="home">
+    <div
+      class="hamburger"
+      @click="hamburgerOpen = !hamburgerOpen"
+      :class="hamburgerOpen ? 'hamburger--is-open' : ''"
+    >
+      <div class="hamburger__item hamburger__item--first"></div>
+      <div class="hamburger__item hamburger__item--middle"></div>
+      <div class="hamburger__item hamburger__item--last"></div>
+    </div>
+    <div class="droper-content" :class="hamburgerOpen ? 'dropic' : ''">
+      <router-link to="/">HOME</router-link>
+      <router-link to="/dashboard">DASHBOARD</router-link>
+      <router-view />
+    </div>
+
     <h1 class="block-effect" style="--td: 1.2s">
       <div class="block-reveal title" style="--bc: #4040bf; --d: .1s">Make a move</div>
       <div class="block-reveal desc" style="--bc: #bf4060; --d: .5s">Join our growing community</div>
@@ -78,6 +93,11 @@ export default {
   name: 'App',
   components: {
     Footer
+  },
+  data() {
+    return {
+      hamburgerOpen: false,
+    }
   }
 }
 </script>
