@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to Dashboard Website 👋</h1>
 
 ![alt text](/src/assets/screen_home.png)
-![a link](https://dashboard-website.vercel.app/)
+[a link](https://dashboard-website.vercel.app)
 
 ## Install
 
