@@ -2,7 +2,7 @@
 
 ![alt text](/src/assets/screen_home.png)
 
-# Demo
+## ✨ Demo
 [a link](https://dashboard-website.vercel.app)
 
 ## Install
