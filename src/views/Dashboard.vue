@@ -1,7 +1,11 @@
 <template>
   <div class="main">
-    <h1>Welcome, {{ this.name }}</h1>
-    <div v-if="user" role="alert">You are logged in!</div>
+    <div v-if="user" class="left-nav">
+      <div class="img-avatar"><img src="../assets/man.png" /></div><h1>{{ user.data.displayName }}</h1>
+      <router-link to="/todo" target="self"
+        ><button id="todo">To Do</button></router-link
+      >
+    </div>
     <div class="nav-item">{{user.data.displayName}}</div>
     <a class="nav-link" @click.prevent="signOut">Sign out</a>
   </div>
@@ -15,7 +19,6 @@ import 'firebase/compat/auth';
 export default {
   name: 'main',
   computed: {
-    // map `this.user` to `this.$store.getters.user`
     ...mapGetters({
       user: "user"
     })
@@ -43,5 +46,28 @@ export default {
   font-family: "Poppins";
   padding: 0;
   margin: 0;
+  background-color: #F2F2F2;
+}
+.left-nav {
+  width: 20%;
+  height: 100vh;
+  background-color: #333;
+}
+.left-nav img {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+}
+h1 {
+  position: absolute;
+  left: 80px;
+  font-size: 35px;
+  font-weight: 600;
+  color: #F2F2F2;
+  padding: 15px 0;
+  background-color: transparent;
 }
 </style>

@@ -20,7 +20,7 @@
             v-model="password"
           />
         </label>
-        <button value="Login" @click="login">Login</button>
+        <button value="Login" @click="login">LOGIN</button>
       </form>
     </div>
   </div>
@@ -122,7 +122,7 @@ form button {
   padding: 12px 0;
   border-radius: 8px;
   margin-top: 12px;
-  background-color: #5AA897;
+  background-color: #199a84;
   color: black;
   border: 0px;
 }
@@ -132,7 +132,7 @@ form button:after {
   opacity: 0;
 }
 form button:hover {
-  background-color: #4f9687;
+  background-color: #158471;
   transition: ease-in 0.2s;
   cursor: pointer;
 }
