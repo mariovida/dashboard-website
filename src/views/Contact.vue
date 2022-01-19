@@ -1,5 +1,21 @@
 <template>
   <div class="contact">
+    <div
+      class="hamburger"
+      @click="hamburgerOpen = !hamburgerOpen"
+      :class="hamburgerOpen ? 'hamburger--is-open' : ''"
+    >
+      <div class="hamburger__item hamburger__item--first"></div>
+      <div class="hamburger__item hamburger__item--middle"></div>
+      <div class="hamburger__item hamburger__item--last"></div>
+    </div>
+    <div class="droper-content" :class="hamburgerOpen ? 'dropic' : ''">
+      <router-link to="/">HOME</router-link>
+      <router-link to="/dashboard">DASHBOARD</router-link>
+      <router-link to="/about">ABOUT</router-link>
+      <router-link to="/contact">CONTACT</router-link>
+    </div>
+
     <h1>You have questions for us?</h1>
     <h2>Get in touch with us!</h2>
     <form @submit.prevent="sendEmail">
@@ -45,6 +61,7 @@ export default {
   name: 'ContactForm',
   data() {
     return {
+      hamburgerOpen: false,
       name: '',
       email: '',
       message: ''
@@ -101,9 +118,6 @@ form {
   text-align: center;
   padding: 20px;
 }
-label {
-  float: left;
-}
 input[type=text], [type=email], textarea {
   width: 100%;
   font-size: 16px;
@@ -156,4 +170,124 @@ input:focus, textarea:focus {
   padding-left: 24px;
   margin-top: 2px;
 }
+@media screen and (max-width: 1280px) {
+  h1 {
+    margin-left: 7%;
+    padding-top: 120px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  h1 {
+    text-align: center;
+    margin-left: 0;
+    font-size: 48px;
+    margin-top: 380px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 28px;
+  }
+  form {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 380px;
+    padding: 0;
+  }
+  .info {
+    top: 570px;
+    left: 22%;
+    width: 56%;
+    height: 350px;
+    float: none;
+    margin-right: 0;
+    border: 0;
+  }
+  .info i {
+    display: block;
+    font-size: 32px;
+    padding: 0 35px 0 0;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .info {
+    left: 15%;
+    width: 70%;
+  }
+  .info i {
+    padding: 0 50px 0 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact {
+    top: 0;
+    right: 0;
+    transform: translate(0%, 0%);
+  }
+  h1 {
+    font-size: 48px;
+    margin-top: 100px;
+    padding: 0;
+  }
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+  }
+  .info {
+    top: 150px;
+    left: 11%;
+    width: 78%;
+    height: 350px;
+  }
+  .info i {
+    display: block;
+    font-size: 32px;
+    padding: 0 35px 0 0;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 21px;
+    padding-top: 10px;
+  }
+  form {
+    width: 86%;
+    margin-left: 7%;
+    margin-top: 400px;
+  }
+  input[type=text], [type=email], textarea {
+    font-size: 15px;
+    padding: 10px 0 10px 15px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+  input[type=submit] {
+    margin-bottom: 40px;
+  }
+  .info {
+    top: 210px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .info i {
+    float: none;
+    font-size: 21px;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  .info p {
+    float: none;
+    font-size: 19px;
+    padding-left: 0px;
+    margin-top: 15px;
+  }
+}
+
 </style>
