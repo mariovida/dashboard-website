@@ -2,7 +2,7 @@
 
 ![image](/src/assets/screen_home.png)
 
-<h3 align="center">❌ In development</h3>
+<h3 align="center">⚠️ In development</h3>
 
 
 ## Tech and tools used
