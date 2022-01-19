@@ -1,5 +1,21 @@
 <template>
   <div class="login">
+    <div
+      class="hamburger"
+      @click="hamburgerOpen = !hamburgerOpen"
+      :class="hamburgerOpen ? 'hamburger--is-open' : ''"
+    >
+      <div class="hamburger__item hamburger__item--first"></div>
+      <div class="hamburger__item hamburger__item--middle"></div>
+      <div class="hamburger__item hamburger__item--last"></div>
+    </div>
+    <div class="droper-content" :class="hamburgerOpen ? 'dropic' : ''">
+      <router-link to="/">HOME</router-link>
+      <router-link to="/dashboard">DASHBOARD</router-link>
+      <router-link to="/about">ABOUT</router-link>
+      <router-link to="/contact">CONTACT</router-link>
+    </div>
+
     <img src="../assets/rego.png" class="startup_image"/>
     <div class="login-information">
       <h1>Login</h1>
@@ -34,6 +50,7 @@ export default {
   name: 'login',
   data() {
     return {
+      hamburgerOpen: false,
       firstname: '',
       lastname: '',
       email: '',
@@ -153,10 +170,10 @@ form button:hover:after {
     padding: 0;
   }
   .login-information h1 {
-    font-size: 56px;
+    font-size: 42px;
   }
   .login-information input {
-    font-size: 16px;
+    font-size: 15px;
   }
   .login form {
     margin-top: 36px;

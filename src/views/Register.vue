@@ -1,5 +1,21 @@
 <template>
   <div class="register">
+    <div
+      class="hamburger"
+      @click="hamburgerOpen = !hamburgerOpen"
+      :class="hamburgerOpen ? 'hamburger--is-open' : ''"
+    >
+      <div class="hamburger__item hamburger__item--first"></div>
+      <div class="hamburger__item hamburger__item--middle"></div>
+      <div class="hamburger__item hamburger__item--last"></div>
+    </div>
+    <div class="droper-content" :class="hamburgerOpen ? 'dropic' : ''">
+      <router-link to="/">HOME</router-link>
+      <router-link to="/dashboard">DASHBOARD</router-link>
+      <router-link to="/about">ABOUT</router-link>
+      <router-link to="/contact">CONTACT</router-link>
+    </div>
+
     <img src="../assets/rego.png" class="startup_image"/>
     <div class="register-information">
       <h1>Registration</h1>
@@ -51,6 +67,7 @@ export default {
   name: 'register',
   data() {
     return {
+      hamburgerOpen: false,
       email: '',
       password: '',
       error: null
@@ -173,10 +190,10 @@ form button:hover:after {
     padding: 0;
   }
   .register-information h1 {
-    font-size: 56px;
+    font-size: 36px;
   }
   .register-information input {
-    font-size: 16px;
+    font-size: 15px;
   }
   .register form {
     margin-top: 36px;

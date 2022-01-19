@@ -12,7 +12,8 @@
     <div class="droper-content" :class="hamburgerOpen ? 'dropic' : ''">
       <router-link to="/">HOME</router-link>
       <router-link to="/dashboard">DASHBOARD</router-link>
-      <router-view />
+      <router-link to="/about">ABOUT</router-link>
+      <router-link to="/contact">CONTACT</router-link>
     </div>
 
     <h1 class="block-effect" style="--td: 1.2s">
