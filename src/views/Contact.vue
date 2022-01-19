@@ -259,7 +259,7 @@ input:focus, textarea:focus {
   form {
     width: 86%;
     margin-left: 7%;
-    margin-top: 420px;
+    margin-top: 460px;
   }
   input[type=text], [type=email], textarea {
     font-size: 15px;
@@ -271,7 +271,7 @@ input:focus, textarea:focus {
     margin-bottom: 40px;
   }
   .info {
-    top: 300px;
+    top: 250px;
     left: 0;
     width: 100%;
     text-align: center;
@@ -280,7 +280,7 @@ input:focus, textarea:focus {
     float: none;
     font-size: 21px;
     padding: 0;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
   }
   .info p {
     float: none;
