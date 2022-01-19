@@ -1,14 +1,10 @@
 <h1 align="center">Welcome to Dashboard Website 👋</h1>
-<p>
-  <a href="https://www.npmjs.com/package/DashboardWebsite" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/DashboardWebsite.svg">
-  </a>
-</p>
 
 ## Install
 
 ```sh
 npm install
+npm run serve
 ```
 
 ## Usage
