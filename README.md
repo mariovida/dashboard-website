@@ -1,24 +1,35 @@
-# Dashboard Website
+<h1 align="center">Welcome to Dashboard Website 👋</h1>
+<p>
+  <a href="https://www.npmjs.com/package/Dashboard Websitee" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/Dashboard Websitee.svg">
+  </a>
+</p>
 
-## Project setup
-```
+## Install
+
+```sh
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+## Usage
+
+```sh
+
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+## Run tests
+
+```sh
+
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Author
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* Github: [@mariovidaa](https://github.com/mariovidaa)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
