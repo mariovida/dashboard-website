@@ -6,6 +6,7 @@ import Login from '../views/Login.vue'
 import UserInfo from '../views/AddData.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
+import Todo from '../views/ToDo.vue'
 import Dashboard from '../views/Dashboard.vue'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
@@ -48,6 +49,12 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact,
+  },
+  {
+    path: '/todo',
+    name: 'ToDo',
+    component: Todo,
+    meta: { requiresAuth: true }
   }
 ]
 
