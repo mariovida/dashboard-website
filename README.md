@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to Dashboard Website 👋</h1>
 
-![alt text](https://github.com/[mariovida]/[dashboard-website]/src/assets/screen_home.jpg?raw=true)
+![alt text](https://github.com/mariovida/dashboard-website/src/assets/screen_home.jpg?raw=true)
 
 ## Install
 
