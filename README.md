@@ -23,6 +23,12 @@ npm install
 npm run serve
 ```
 
+## Example login details (email & password)
+```sh
+marko@hotmail.com
+marko123
+```
+
 
 ## Show your support
 
