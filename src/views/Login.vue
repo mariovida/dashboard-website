@@ -67,6 +67,9 @@ export default {
   padding: 0;
   margin: 0;
 }
+body {
+  height: 100vh;
+}
 .login img {
   position: absolute;
   top: 50%;
@@ -78,10 +81,9 @@ export default {
   position: absolute;
   top: 50%;
   right: 5%;
-  transform: translate(0%, -40%);
+  transform: translate(0%, -50%);
   width: 45%;
   padding: 6% 5% 5% 5%;
-  min-height: 100vh;
 }
 .login-information h1 {
   font-size: 58px;
@@ -140,5 +142,36 @@ form button:hover:after {
   opacity: 1;
   margin-left: 10px;
   transition: ease-in 0.2s;
+}
+@media screen and (max-width: 768px) {
+  .login img {
+    display: none;
+  }
+  .login-information {
+    right: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .login-information h1 {
+    font-size: 56px;
+  }
+  .login-information input {
+    font-size: 16px;
+  }
+  .login form {
+    margin-top: 36px;
+  }
+  form button {
+    width: 180px;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+  form button:hover {
+    transition: ease-in 0.1s;
+  }
+  form button:hover:after {
+    margin-left: 10px;
+    transition: ease-in 0.1s;
+  }
 }
 </style>

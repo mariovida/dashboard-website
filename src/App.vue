@@ -56,7 +56,7 @@ export default {
   font-family: "Poppins";
   text-decoration: none;
   font-size: 17px;
-  color: white;
+  color: #F2F2F2;
   border: 2px solid #333;
   border-radius: 8px;
   padding: 5px 18px;
@@ -76,8 +76,8 @@ export default {
   transition: 0.4s;
 }
 .change_color #nav a {
-  color: white;
-  border-color: white;
+  color: #F2F2F2;
+  border-color: #F2F2F2;
   padding: 5px 18px;
 }
 .change_color #nav a:hover {

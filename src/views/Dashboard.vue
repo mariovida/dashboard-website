@@ -1,13 +1,15 @@
 <template>
   <div class="main">
+    <div class="nav-background"></div>
     <div v-if="user" class="left-nav">
-      <div class="img-avatar"><img src="../assets/man.png" /></div><h1>{{ user.data.displayName }}</h1>
-      <router-link to="/todo" target="self"
-        ><button id="todo">To Do</button></router-link
-      >
+      <div><img src="../assets/man.png" /></div><h1>{{ user.data.displayName }}</h1>
+      <div class="left-nav-buttons">
+        <router-link to="/dashboard" target="self">Analytics</router-link><br/>
+        <router-link to="/todo" target="self">To Do</router-link><br/>
+        <a @click.prevent="signOut">Sign out</a>
+      </div>
     </div>
-    <div class="nav-item">{{user.data.displayName}}</div>
-    <a class="nav-link" @click.prevent="signOut">Sign out</a>
+
   </div>
 </template>
 
@@ -48,10 +50,18 @@ export default {
   margin: 0;
   background-color: #F2F2F2;
 }
-.left-nav {
-  width: 20%;
-  height: 100vh;
+.nav-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
   background-color: #333;
+}
+.left-nav {
+  width: 280px;
+  height: 100vh;
+  background-color: #CCC;
 }
 .left-nav img {
   width: 40px;
@@ -69,5 +79,35 @@ h1 {
   color: #F2F2F2;
   padding: 15px 0;
   background-color: transparent;
+}
+.left-nav-buttons {
+  background-color: transparent;
+  position: absolute;
+  top: 120px;
+  left: 40px;
+}
+.left-nav-buttons a {
+  display: block;
+  width: 200px;
+  padding: 10px 0;
+  background-color: #CCC;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid #333;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.left-nav-buttons a:hover {
+  background-color: #404040;
+  color: #F2F2F2;
+}
+.left-nav-buttons a.router-link-exact-active {
+  background-color: #333;
+  color: #F2F2F2;
+}
+.left-nav-buttons a.router-link-exact-active:hover {
+  background-color: #404040;
 }
 </style>

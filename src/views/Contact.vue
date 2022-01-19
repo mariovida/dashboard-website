@@ -32,8 +32,6 @@
       <i class="fas fa-phone-alt"><p>+385 91 732 4270</p></i>
       <i class="fas fa-clock"><p><b>Mon-Fri</b> : 09:00-17:00</p></i>
     </div>
-
-    <Footer />
   </div>
 </template>
 
@@ -42,13 +40,9 @@
 
 <script>
 import emailjs from 'emailjs-com';
-import Footer from '../components/Footer.vue'
 
 export default {
   name: 'ContactForm',
-  components: {
-    Footer
-  },
   data() {
     return {
       name: '',

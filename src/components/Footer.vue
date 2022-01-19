@@ -30,4 +30,9 @@ footer a {
 footer a:hover {
   color: #CCC;
 }
+@media screen and (max-width: 768px) {
+  footer {
+    font-size: 8px;
+  }
+}
 </style>
