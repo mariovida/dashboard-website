@@ -2,7 +2,7 @@
 
 ![image](/src/assets/screen_home.png)
 
-<h3 align="center">🛠️ In development</h3>
+<h3 align="center">⚠️ In development</h3>
 
 
 ## Tech and tools used
@@ -31,6 +31,7 @@ marko@hotmail.com
 marko123
 ```
 ![image](/src/assets/screen_login.png)
+![image](/src/assets/screen_dash.png)
 
 
 ## Show your support
