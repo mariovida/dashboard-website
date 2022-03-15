@@ -1,6 +1,7 @@
 <h1 align="center">Welcome to Dashboard Website 👋</h1>
 
 ![image](/src/assets/screen_home.png)
+![image](/src/assets/screen_home2.png)
 
 <h3 align="center">⚠️ In development</h3>
 
